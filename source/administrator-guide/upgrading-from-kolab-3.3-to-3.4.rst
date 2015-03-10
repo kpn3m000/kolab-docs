@@ -80,6 +80,17 @@ Update and Upgrade the system
     You'll lose your configuration and credentials and end up with a broken frontend.
 
 
+Reconstruct IMAP Mailboxes
+--------------------------
+
+To convert to the new cyrus format run (this can take some time depending on your mailbox count and system performance):
+
+ .. parsed-literal::
+
+    # :command:`tail -f /var/log/maillog`
+    # :command:`sudo -u cyrus -- /usr/lib/cyrus-imapd/reconstruct`
+
+
 Update your configuration files
 ===============================
 
